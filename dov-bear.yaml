@@ -48,7 +48,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: status.podIP
-        image: chukmunnlee/argo-dov-bear:sha256:d0705027217cad6794ac2965c78d2030fc4abfe2999034bbb5714c40cc80a526
+        image: chukmunnlee/argo-dov-bear@sha256:d0705027217cad6794ac2965c78d2030fc4abfe2999034bbb5714c40cc80a526
         imagePullPolicy: IfNotPresent
         name: dov-container
         ports:
