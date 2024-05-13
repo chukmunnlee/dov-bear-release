@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   labels:
     app.kubernetes.io/managed-by: kustomize-v5.4.1
-    commit: f6a5639
+    commit: aa5a1c2
   name: playground
 ---
 apiVersion: v1
@@ -11,7 +11,7 @@ kind: Service
 metadata:
   labels:
     app.kubernetes.io/managed-by: kustomize-v5.4.1
-    commit: f6a5639
+    commit: aa5a1c2
   name: dov-svc
   namespace: playground
 spec:
@@ -20,7 +20,7 @@ spec:
     targetPort: dov-port
   selector:
     app: dov-bear
-    commit: f6a5639
+    commit: aa5a1c2
     name: dov-po
   type: ClusterIP
 ---
@@ -30,7 +30,7 @@ metadata:
   labels:
     app: dov-bear
     app.kubernetes.io/managed-by: kustomize-v5.4.1
-    commit: f6a5639
+    commit: aa5a1c2
     name: dov-deploy
   name: dov-deploy
   namespace: playground
@@ -39,13 +39,13 @@ spec:
   selector:
     matchLabels:
       app: dov-bear
-      commit: f6a5639
+      commit: aa5a1c2
       name: dov-po
   template:
     metadata:
       labels:
         app: dov-bear
-        commit: f6a5639
+        commit: aa5a1c2
         name: dov-po
       name: dov-po
     spec:
@@ -59,7 +59,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: status.podIP
-        image: chukmunnlee/argo-dov-bear@sha256:105c14e38830204549ed91efae673558a20a10205fde5b8a3be391b5b832ddbc
+        image: chukmunnlee/argo-dov-bear@sha256:973deb48324fe10f49d1e01e6789927aaece38895a10cb2a019a8dea159b7998
         imagePullPolicy: IfNotPresent
         name: dov-container
         ports:
