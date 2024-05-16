@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+buildMetadata: [managedByLabel]
+
+labels:
+- pairs:
+    commit: d85f714
+  includeTemplates: true
+  includeSelectors: true
+
+images:
+- name: chukmunnlee/dov-bear
+  newName: chukmunnlee/argo-dov-bear
+  digest: sha256:45fea954df1b352ec60f6b68361bdb02d1257730352f49fc9eadd14659044dce
