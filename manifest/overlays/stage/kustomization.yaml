@@ -15,4 +15,4 @@ labels:
 images:
 - name: chukmunnlee/dov-bear
   newName: chukmunnlee/argo-dov-bear
-  digest: sha256:45fea954df1b352ec60f6b68361bdb02d1257730352f49fc9eadd14659044dce
+  digest: sha256:52e0110d374278cea35a135ce5761ef7b11fc8b21ad80cb17c91b301082ee4db
